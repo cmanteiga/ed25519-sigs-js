@@ -8,9 +8,9 @@ Fast Ed25519 signatures for node and the browser
 
 Uses and is compatible with the OpenSSH key format (from openSSH 6.5+).
 
-# Usage
+## Usage
 
-# Contributing
+## Contributing
 
 ## Development
 
@@ -23,7 +23,7 @@ Uses and is compatible with the OpenSSH key format (from openSSH 6.5+).
 
 When server source files change, the badge server should automatically restart
 itself (using [nodemon][]). When the frontend files change, the frontend dev
-server (`gatsby dev`) should also automatically reload. However the badge
+server (`gatsby dev`) should also automatically reload. However the ed25519 signature
 definitions are built only before the server first starts. To regenerate those,
 either run `npm run defs` or manually restart the server.
 
@@ -34,7 +34,7 @@ It also works with full URLs like
 Use `npm run debug:server` to start server in debug mode.
 [This recipe][nodemon debug] shows how to debug Node.js application in [VS Code][].
 
-Shields has experimental support for [Gitpod][gitpod], a pre-configured development
+Ed25519-sigs has experimental support for [Gitpod][gitpod], a pre-configured development
 environment that runs in your browser. To use Gitpod, click the button below and
 sign in with GitHub. Gitpod also offers a browser add-on, though it is not required.
 Please report any Gitpod bugs, questions, or suggestions in issue
@@ -49,15 +49,15 @@ snapshots, and `SNAPSHOT_UPDATE=1 npm run test:js:server` to update them.
 
 ## Related projects
 
-- [badgerbadgerbadger gem][gem]
-- [pybadges python library][pybadges]
+- [self-25519-edwards gem][gem]
+- [pybadges python library][pysigs]
 
-[gem]: https://github.com/badges/badgerbadgerbadger
-[pybadges]: https://github.com/google/pybadges
+[gem]: https://github.com/ed2519/edwards-sigsorhands
+[pysigs]: https://github.com/google/pysigs-in-the-wind
 
 ## License
 
-All assets and code are under the [CC0 LICENSE](LICENSE) and in the public
+All assets and code are under the [MIT LICENSE](LICENSE) and in the public
 domain unless specified otherwise.
 
 The assets in `logo/` are trademarks of their respective companies and are
