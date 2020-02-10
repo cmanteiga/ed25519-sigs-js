@@ -1,0 +1,37 @@
+{
+  "name": "ed25519-sigs",
+  "description": "Fast Ed25519 signatures for the browser and nodeJS",
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "javascript",
+    "ed25519",
+    "curve25519",
+    "browser",
+    "nodejs"
+  ],
+  "author": "Carlos Mantego <gabelerner@gmail.com>",
+  "contributors": [
+    "Gabe Leerner"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cmantegia/ed25519-sigs.git"
+  },
+  "main": "dist/node/ed25519-sigs.ts",
+  "types": "dist/node/ed25519-sigs.d.ts",
+  "browser": "dist/browser/ed25519-sigs.min.js",
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "readmeFilename": "README.md",
+  "jspm": {
+    "registry": "npm"
+  }
+}
