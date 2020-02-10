@@ -5,19 +5,21 @@
     "node": "*"
   },
   "keywords": [
-    "javascript",
     "ed25519",
     "curve25519",
+    "signatures",
+    "javascript",
+    "typescript",
     "browser",
     "nodejs"
   ],
-  "author": "Carlos Mantego <gabelerner@gmail.com>",
+  "author": "Carlos Mantego <carlosmantego@gmail.com>",
   "contributors": [
     "Gabe Leerner"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/cmantegia/ed25519-sigs.git"
+    "url": "git://github.com/cmanteiga/ed25519-sigs.git"
   },
   "main": "dist/node/ed25519-sigs.ts",
   "types": "dist/node/ed25519-sigs.d.ts",
