@@ -21,9 +21,9 @@
     "type": "git",
     "url": "git://github.com/cmanteiga/ed25519-sigs.git"
   },
-  "main": "dist/node/ed25519-sigs.ts",
-  "types": "dist/node/ed25519-sigs.d.ts",
-  "browser": "dist/browser/ed25519-sigs.min.js",
+  "main": "dist/node/ed25519_sigs_bg.js",
+  "types": "dist/node/ed25519_sigs_bg.d.ts",
+  "browser": "dist/browser/ed25519_sigs.js",
   "version": "0.1.0",
   "license": "MIT",
   "files": [

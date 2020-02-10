@@ -1,14 +1,14 @@
 {
-  "name": "sig_lib_rs",
+  "name": "ed25519_sigs",
   "collaborators": [
     "Nicolas Marshall <marshall.nicolas@gmail.com>"
   ],
   "version": "0.1.0",
   "files": [
-    "sig_lib_rs_bg.wasm",
-    "sig_lib_rs.js",
-    "sig_lib_rs.d.ts"
+    "ed25519_sigs_bg.wasm",
+    "ed25519_sigs.js",
+    "ed25519_sigs.d.ts"
   ],
-  "browser": "sig_lib_rs.js",
-  "types": "sig_lib_rs.d.ts"
+  "browser": "ed25519_sigs.js",
+  "types": "ed25519_sigs.d.ts"
 }
