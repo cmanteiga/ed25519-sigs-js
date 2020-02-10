@@ -1,0 +1,14 @@
+{
+  "name": "sig_lib_rs",
+  "collaborators": [
+    "Nicolas Marshall <marshall.nicolas@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "sig_lib_rs_bg.wasm",
+    "sig_lib_rs.js",
+    "sig_lib_rs.d.ts"
+  ],
+  "browser": "sig_lib_rs.js",
+  "types": "sig_lib_rs.d.ts"
+}
