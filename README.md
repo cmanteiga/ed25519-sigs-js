@@ -10,9 +10,20 @@ Uses and is compatible with the OpenSSH key format (from openSSH 6.5+).
 
 ## Usage
 
+### API
+
+- add
+- sign(message)
+- verify (message, signature, pubKey)
+
+ interface KeyPair:
+- generate
+- toJSON
+- fromJSON
+
 ## Contributing
 
-## Development
+### Development
 
 1. Install Node 8 or later. You can use the [package manager][] of your choice.
    Tests need to pass in Node 8 and 10.
@@ -50,7 +61,7 @@ snapshots, and `SNAPSHOT_UPDATE=1 npm run test:js:server` to update them.
 ## Related projects
 
 - [self-25519-edwards gem][gem]
-- [pybadges python library][pysigs]
+- [pySigs python library][pysigs]
 
 [gem]: https://github.com/ed2519/edwards-sigsorhands
 [pysigs]: https://github.com/google/pysigs-in-the-wind
