@@ -21,7 +21,7 @@
     "type": "git",
     "url": "git://github.com/cmanteiga/ed25519-sigs.git"
   },
-  "main": "dist/node/ed25519_sigs_bg.js",
+  "main": "dist/node/ed25519_sigs.js",
   "types": "dist/node/ed25519_sigs_bg.d.ts",
   "browser": "dist/browser/ed25519_sigs.js",
   "version": "0.1.0",
