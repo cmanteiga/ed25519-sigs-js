@@ -119,9 +119,9 @@ function getInt32Memory0() {
 /**
 * @returns {string}
 */
-module.exports.new_mnemonic = function() {
+module.exports.new_mnemophrase = function() {
     try {
-        wasm.new_mnemonic(8);
+        wasm.new_mnemophrase(8);
         var r0 = getInt32Memory0()[8 / 4 + 0];
         var r1 = getInt32Memory0()[8 / 4 + 1];
         return getStringFromWasm0(r0, r1);
@@ -150,10 +150,10 @@ function passStringToWasm0(arg, malloc) {
 * @param {string} phrase
 * @returns {any}
 */
-module.exports.seed_from_mnemonic = function(phrase) {
+module.exports.seed_from_phrase = function(phrase) {
     var ptr0 = passStringToWasm0(phrase, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     var len0 = WASM_VECTOR_LEN;
-    var ret = wasm.seed_from_mnemonic(ptr0, len0);
+    var ret = wasm.seed_from_phrase(ptr0, len0);
     return takeObject(ret);
 };
 

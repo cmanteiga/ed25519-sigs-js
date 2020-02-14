@@ -26,12 +26,12 @@ export function verify(message: Uint8Array, pubKey: Uint8Array, signature: Uint8
 /**
 * @returns {string} 
 */
-export function new_mnemonic(): string;
+export function new_mnemophrase(): string;
 /**
 * @param {string} phrase 
 * @returns {any} 
 */
-export function seed_from_mnemonic(phrase: string): any;
+export function seed_from_phrase(phrase: string): any;
 
 /**
 * If `module_or_path` is {RequestInfo}, makes a request and
