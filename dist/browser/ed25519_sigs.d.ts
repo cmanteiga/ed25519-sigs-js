@@ -24,10 +24,6 @@ export function sign(message: Uint8Array, privKey: Uint8Array): any;
 */
 export function verify(message: Uint8Array, pubKey: Uint8Array, signature: Uint8Array): boolean;
 /**
-* @returns {string} 
-*/
-export function new_mnemophrase(): string;
-/**
 * @param {string} phrase 
 * @returns {any} 
 */
