@@ -8,3 +8,4 @@ export function verify(a: number, b: number, c: number, d: number, e: number, f:
 export function seed_from_phrase(a: number, b: number): number;
 export function __wbindgen_malloc(a: number): number;
 export function __wbindgen_realloc(a: number, b: number, c: number): number;
+export function __wbindgen_free(a: number, b: number): void;
