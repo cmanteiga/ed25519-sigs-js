@@ -1,5 +1,5 @@
 {
-  "name": "ed25519-sigs",
+  "name": "ed25519-sigs-js",
   "description": "Fast Ed25519 signatures for the browser and nodeJS",
   "engines": {
     "node": "*"
