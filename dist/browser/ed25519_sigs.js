@@ -119,6 +119,17 @@ function passArray8ToWasm0(arg, malloc) {
     return ptr;
 }
 /**
+* @param {Uint8Array} pair_bytes
+* @returns {any}
+*/
+export function pubKey_from_pair_bytes(pair_bytes) {
+    var ptr0 = passArray8ToWasm0(pair_bytes, wasm.__wbindgen_malloc);
+    var len0 = WASM_VECTOR_LEN;
+    var ret = wasm.pubKey_from_pair_bytes(ptr0, len0);
+    return takeObject(ret);
+}
+
+/**
 * @param {Uint8Array} message
 * @param {Uint8Array} keypair_bytes
 * @returns {any}

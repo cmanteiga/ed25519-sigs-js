@@ -6,6 +6,11 @@
 */
 export function gen_keypair(phrase: string): any;
 /**
+* @param {Uint8Array} pair_bytes 
+* @returns {any} 
+*/
+export function pubKey_from_pair_bytes(pair_bytes: Uint8Array): any;
+/**
 * @param {Uint8Array} message 
 * @param {Uint8Array} keypair_bytes 
 * @returns {any} 
