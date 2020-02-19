@@ -49,65 +49,6 @@ function addHeapObject(obj) {
 
 let WASM_VECTOR_LEN = 0;
 
-function passArray8ToWasm0(arg, malloc) {
-    const ptr = malloc(arg.length * 1);
-    getUint8Memory0().set(arg, ptr / 1);
-    WASM_VECTOR_LEN = arg.length;
-    return ptr;
-}
-/**
-* @param {Uint8Array} seed
-* @returns {any}
-*/
-export function gen_pubKey(seed) {
-    var ptr0 = passArray8ToWasm0(seed, wasm.__wbindgen_malloc);
-    var len0 = WASM_VECTOR_LEN;
-    var ret = wasm.gen_pubKey(ptr0, len0);
-    return takeObject(ret);
-}
-
-/**
-* @param {Uint8Array} seed
-* @returns {any}
-*/
-export function gen_privKey(seed) {
-    var ptr0 = passArray8ToWasm0(seed, wasm.__wbindgen_malloc);
-    var len0 = WASM_VECTOR_LEN;
-    var ret = wasm.gen_privKey(ptr0, len0);
-    return takeObject(ret);
-}
-
-/**
-* @param {Uint8Array} message
-* @param {Uint8Array} privKey
-* @returns {any}
-*/
-export function sign(message, privKey) {
-    var ptr0 = passArray8ToWasm0(message, wasm.__wbindgen_malloc);
-    var len0 = WASM_VECTOR_LEN;
-    var ptr1 = passArray8ToWasm0(privKey, wasm.__wbindgen_malloc);
-    var len1 = WASM_VECTOR_LEN;
-    var ret = wasm.sign(ptr0, len0, ptr1, len1);
-    return takeObject(ret);
-}
-
-/**
-* @param {Uint8Array} message
-* @param {Uint8Array} pubKey
-* @param {Uint8Array} signature
-* @returns {boolean}
-*/
-export function verify(message, pubKey, signature) {
-    var ptr0 = passArray8ToWasm0(message, wasm.__wbindgen_malloc);
-    var len0 = WASM_VECTOR_LEN;
-    var ptr1 = passArray8ToWasm0(pubKey, wasm.__wbindgen_malloc);
-    var len1 = WASM_VECTOR_LEN;
-    var ptr2 = passArray8ToWasm0(signature, wasm.__wbindgen_malloc);
-    var len2 = WASM_VECTOR_LEN;
-    var ret = wasm.verify(ptr0, len0, ptr1, len1, ptr2, len2);
-    return ret !== 0;
-}
-
 let cachedTextEncoder = new TextEncoder('utf-8');
 
 const encodeString = (typeof cachedTextEncoder.encodeInto === 'function'
@@ -160,6 +101,54 @@ function passStringToWasm0(arg, malloc, realloc) {
     WASM_VECTOR_LEN = offset;
     return ptr;
 }
+/**
+* @param {string} phrase
+* @returns {any}
+*/
+export function gen_keypair(phrase) {
+    var ptr0 = passStringToWasm0(phrase, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    var len0 = WASM_VECTOR_LEN;
+    var ret = wasm.gen_keypair(ptr0, len0);
+    return takeObject(ret);
+}
+
+function passArray8ToWasm0(arg, malloc) {
+    const ptr = malloc(arg.length * 1);
+    getUint8Memory0().set(arg, ptr / 1);
+    WASM_VECTOR_LEN = arg.length;
+    return ptr;
+}
+/**
+* @param {Uint8Array} message
+* @param {Uint8Array} keypair_bytes
+* @returns {any}
+*/
+export function sign(message, keypair_bytes) {
+    var ptr0 = passArray8ToWasm0(message, wasm.__wbindgen_malloc);
+    var len0 = WASM_VECTOR_LEN;
+    var ptr1 = passArray8ToWasm0(keypair_bytes, wasm.__wbindgen_malloc);
+    var len1 = WASM_VECTOR_LEN;
+    var ret = wasm.sign(ptr0, len0, ptr1, len1);
+    return takeObject(ret);
+}
+
+/**
+* @param {Uint8Array} message
+* @param {Uint8Array} pubKey_bytes
+* @param {Uint8Array} sig_bytes
+* @returns {boolean}
+*/
+export function verify(message, pubKey_bytes, sig_bytes) {
+    var ptr0 = passArray8ToWasm0(message, wasm.__wbindgen_malloc);
+    var len0 = WASM_VECTOR_LEN;
+    var ptr1 = passArray8ToWasm0(pubKey_bytes, wasm.__wbindgen_malloc);
+    var len1 = WASM_VECTOR_LEN;
+    var ptr2 = passArray8ToWasm0(sig_bytes, wasm.__wbindgen_malloc);
+    var len2 = WASM_VECTOR_LEN;
+    var ret = wasm.verify(ptr0, len0, ptr1, len1, ptr2, len2);
+    return ret !== 0;
+}
+
 /**
 * @param {string} phrase
 * @returns {any}
